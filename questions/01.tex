@@ -1,0 +1,15 @@
+\question[1]
+Il protocollo \texttt{HTTP}, nelle sue versioni \texttt{1.0} e \texttt{1.1}, può usare al livello trasporto connessioni TCP persistenti. %
+Questo significa che:
+
+\begin{checkboxes}
+	\choice Viene aperta una sola connessione TCP tra il client e il server, su questa connessione vengono trasmessi in sequenza tutti gli oggetti che vanno a comporre la pagina Web; %
+	quando la pagina web è stata completamente scaricata, la connessione viene tenuta aperta anche se non ci sono dati da inviare fino a quando il browser non abbandona la pagina, così eventuali refresh sono più veloci perché la connessione TCP è già aperta.
+
+	\choice Viene aperta una prima connessione TCP, scaricando il primo oggetto della pagina web, se questo trasferimento ha successo, viene tenuta aperta questa connessione TCP inviando la richiesta di un nuovo oggetto, ma viene aperta una seconda connessione TCP per trasferire un altro oggetto in parallelo, se entrambi questi trasferimenti hanno successo viene aperta una terza connessione e così via, fino a quando la pagina web è composta per intero oppure fino a quando un oggetto non viene scaricato correttamente indicando che la rete è satura e quindi HTTP continua a trasferire gli oggetti sulle connessioni già aperte.
+
+	\CorrectChoice Vengono aperte più connessioni TCP in parallelo tra il client e il server, in genere fino a 4, ma dipende dal sistema operativo, e su ciascuna di queste connessioni vengono trasmessi in sequenza uno o più oggetti che vanno a comporre la pagina Web; %
+	il client richiede la trasmissione di ciascun oggetto nella sequenza che ritiene più opportuna.
+
+	\choice Viene aperta una sola connessione TCP tra il client e il server, su questa connessione vengono trasmessi in sequenza tutti gli oggetti che vanno a comporre la pagina Web; il client richiede la trasmissione degli oggetti uno per uno ma solo dopo aver verificato che l'oggetto precedente è stato scaricato in modo corretto.
+\end{checkboxes}

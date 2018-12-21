@@ -1,0 +1,29 @@
+\usepackage{comment}
+\usepackage[english, italian]{babel}
+\usepackage[autostyle, italian=quotes]{csquotes}
+\usepackage{eqparbox}
+
+\extrawidth{.5in}
+\extraheadheight{-.5in}
+\extrafootheight{-.5in}
+\pagestyle{empty}
+
+\usepackage{enumitem}
+\newlist{compactlist}{itemize}{2}
+\setlist[compactlist]{label=\normalfont\bfseries\textendash,noitemsep, topsep = 0pt, parsep = 0pt, partopsep = 0pt}
+
+\CorrectChoiceEmphasis{\color{ForestGreen}}
+\renewcommand{\solutiontitle}{\noindent\textbf{Spiegazione}\par\noindent}
+
+\usepackage{titling}
+\newcommand\subtitle[1]{%
+	\posttitle{%
+		\par\end{center}
+		\begin{center}\large#1\end{center}
+		\vskip0.5em}%
+}
+
+\title{Quiz di Reti\\\underline{in preparazione allo scritto}}
+\subtitle{(Un accidente della storia)}
+\author{Emanuele Nardi}
+\date{Compilato il \today}

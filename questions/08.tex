@@ -1,0 +1,12 @@
+\question[1]
+Il retransmission timeout (RTO) di TCP, durante il normale funzionamento del protocollo, cioè in assenza di perdite viene calcolato con la seguente formula:
+
+\begin{checkboxes}
+	\choice \texttt{RTO = min(CRTO,MAXRTO)} dove \texttt{MAXRTO} è il valore massimo ammesso dal sistema operativo, mentre \texttt{CRTO = SRTT + 4*RTTVAR}, dove \texttt{SRTT} è una stima del valor medio del \texttt{Round Trip Time (RTT)} e \texttt{RTTVAR} è la stima della varianza di \texttt{RTT}.
+
+	\choice \texttt{RTO = 2*CRTO dove CRTO = SRTT + 4RTTVAR}, dove \texttt{SRTT} è una stima del valor medio del \texttt{Round Trip Time (RTT)} e \texttt{RTTVAR} è la stima della varianza di \texttt{RTT}.
+
+	\choice \texttt{RTO = max(CRTO,MINRTO)} dove \texttt{MINRTO} è il valore minimo ammesso dal sistema operativo, mentre \texttt{CRTO = 4*SRTT - RTTVAR}, dove \texttt{SRTT} è una stima del valor medio del \texttt{Round Trip Time (RTT)} e \texttt{RTTVAR} è la stima della varianza di \texttt{RTT}.
+
+	\CorrectChoice \texttt{RTO = max(CRTO,MINRTO)} dove \texttt{MINRTO} è il valore minimo ammesso dal sistema operativo, mentre \texttt{CRTO = SRTT + 4*RTTVAR}, dove \texttt{SRTT} è una stima del valor medio del \texttt{Round Trip Time (RTT)} e \texttt{RTTVAR} è la stima della varianza di \texttt{RTT}.
+\end{checkboxes}

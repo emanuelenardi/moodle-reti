@@ -1,0 +1,20 @@
+\question[1]
+Gli indirizzi IP sono numeri interi di 32 bit, normalmente indicati nella notazione "dotted decimal", cioè con quatto numeri interi separati da un punto: X.Y.Z.W con associata una "network mask" con la stessa notazione; ad esempio \texttt{128.10.0.18}; \texttt{255.255.255.0}.
+
+Indicare quale dei seguenti indirizzi è un indirizzo Unicast valido instradabile in Internet.
+
+\begin{checkboxes}
+	\choice \eqmakebox[indirizzo][l]{\texttt{224.144.11.132};} \texttt{255.255.255.0}
+	\choice \eqmakebox[indirizzo][l]{\texttt{130.192.1.0};} \texttt{255.255.255.0}
+	\CorrectChoice \eqmakebox[indirizzo][l]{\texttt{20.144.11.132};} \texttt{255.255.255.128}
+	\choice \eqmakebox[indirizzo][l]{\texttt{10.144.11.132};} \texttt{255.255.255.128}
+\end{checkboxes}
+
+\begin{solution}
+\begin{compactlist}
+		\item \texttt{130} non è un indirizzo per un \emph{host}, è un identificativo di una rete;
+		\item \texttt{10} è un indirizzo assegnato per \emph{reti private};
+		\item \texttt{20} è un indirizzo \emph{multicast};
+		\item da \texttt{224.0.0.0} a \texttt{239.255.255.255} sono indirizzi di classe D, di tipo \emph{multicast}.
+\end{compactlist}
+\end{solution}
