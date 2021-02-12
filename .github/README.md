@@ -8,3 +8,20 @@
 [![GitHub tag](https://img.shields.io/github/release/emanuelenardi/moodle-reti.svg)](https://gitHub.com/emanuelenardi/moodle-reti/tags/)
 
 Collezione dei quiz di reti su Moodle
+
+# Download
+
+
+
+# Compilazione
+
+Prerequisiti:
+
+- una distribuzione TeX, ad esempio [MiKTeX](https://miktex.org/) o [TeXLive](http://tug.org/texlive/)
+- se volete compilare utilizzando il tool [Arara](https://gitlab.com/islandoftex/arara/), allora dovrete avere una [JVM](https://www.java.com/) installata
+
+Per creare il pdf:
+
+1. clonate la repository con `git clone https://github.com/emanuelenardi/moodle-reti`
+2. entrate nella directory
+3. compilate il file con `arara quiz`
