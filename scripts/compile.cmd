@@ -1,2 +1,1 @@
-arara main
-pause
+arara --verbose quiz

@@ -1,0 +1,31 @@
+\documentclass[10pt]{exam}
+
+\usepackage{settings/variants}
+\usepackage{settings/main.preamble}
+
+% arara: pdflatex: { shell: yes, synctex: no }
+% arara: pdflatex: { shell: yes, synctex: yes }
+%! arara: clean:    { files: [quiz.log,
+%! arara: -->                 quiz-draft.log, quiz-draft.aux,
+%! arara: -->                 quiz-answers.log, quiz-answers.aux] }
+\begin{document}
+\maketitle
+
+\section*{Domande del quiz}
+
+\newcommand*{\minNumber}{1}% Adjust these two settings for your needs.
+\newcommand*{\maxNumber}{15}
+
+\begin{questions}
+	\foreach \fileNumber in {\minNumber,...,\maxNumber}{%
+		\edef\FileName{./questions/\fileNumber}
+		\IfFileExists{\FileName} {%
+			\par
+			\input{\FileName}%
+		}{%
+			% files does not exist, so nothing to do
+		}%
+	}%
+\end{questions}
+
+\end{document}

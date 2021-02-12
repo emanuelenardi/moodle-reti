@@ -1,0 +1,16 @@
+% NOTE https://tex.stackexchange.com/a/576512/127473
+\usepackage{shellesc}
+
+\ifdefined\dovariants\else
+	\edef\variant#1{%
+		pdflatex --jobname='\jobname-#1'
+		'\gdef\string\dovariants{}% the \else part will be skipped
+		\string\PassOptionsToClass{#1}{exam}% pass the option
+		\string\input{\jobname}'% input the document
+		% \ifprintanswers
+		% \fi
+	}%
+	\ShellEscape{\variant{draft}}% do the first run
+	\ShellEscape{\variant{answers}}% do the second run
+	\expandafter\stop
+\fi
